@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Someone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Screen 1: Welcome with Name and Photo -->
+    <div class="screen" id="screen1">
+        <div class="welcome-container">
+            <div class="profile-card">
+                <img src="https://via.placeholder.com/200/FF69B4/FFFFFF?text=Ruqia" alt="Profile Photo" class="profile-photo">
+                <h1 class="profile-name">Ruqia</h1>
+                <p class="profile-subtitle">Click my name to continue...</p>
+            </div>
+            <button class="btn-click-name" onclick="goToScreen2()">Click My Name ❤️</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: Like or Dislike Choice -->
+    <div class="screen hidden" id="screen2">
+        <div class="choice-container">
+            <h2>How do you feel about me?</h2>
+            <div class="button-group">
+                <button class="btn btn-like" onclick="goToScreen3Like()">❤️ Like</button>
+                <button class="btn btn-dislike" onclick="goToDislike()">💔 Dislike</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Like - Finite or Infinite Choice -->
+    <div class="screen hidden" id="screen3">
+        <div class="choice-container">
+            <h2>How long will you love me?</h2>
+            <div class="button-group">
+                <button class="btn btn-finite" onclick="goToFinite()">🕐 Finite</button>
+                <button class="btn btn-infinite" onclick="goToInfinite()">♾️ Infinite</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 4: Dislike Response -->
+    <div class="screen hidden" id="screen4">
+        <div class="message-container">
+            <div class="message-box dislike-message">
+                <h2>No issues, bye! 👋</h2>
+                <p>Thanks for choosing me.</p>
+                <button class="btn btn-exit" onclick="exitSite()">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 5: Finite Response -->
+    <div class="screen hidden" id="screen5">
+        <div class="message-container">
+            <div class="message-box finite-message">
+                <h2>Thank you, Ruqia! 💕</h2>
+                <p>I also choose you in every universe</p>
+                <p class="highlight-text">in which the loving you will be unconditional</p>
+                <button class="btn btn-continue" onclick="goToPassword()">Continue ➜</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 6: Infinite Response -->
+    <div class="screen hidden" id="screen6">
+        <div class="message-container">
+            <div class="message-box infinite-message">
+                <h2>Forever Together! 🌟</h2>
+                <p>Thank you, Ruqia! 💕</p>
+                <p>I also choose you in every universe</p>
+                <p class="highlight-text">in which the loving you will be unconditional</p>
+                <button class="btn btn-continue" onclick="goToPassword()">Continue ➜</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 7: Password Exit -->
+    <div class="screen hidden" id="screen7">
+        <div class="password-container">
+            <h2>Final Exit 🔐</h2>
+            <p>Enter the password to exit</p>
+            <div class="password-input-group">
+                <input type="password" id="passwordInput" placeholder="Enter password..." class="password-input">
+                <button class="btn btn-submit" onclick="checkPassword()">Submit</button>
+            </div>
+            <p class="hint">Hint: What's the most powerful emotion? 💝</p>
+            <div id="passwordError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Success Screen -->
+    <div class="screen hidden" id="screenSuccess">
+        <div class="success-container">
+            <h1>💖 Thank You! 💖</h1>
+            <p class="success-message">You've completed the journey with all your heart.</p>
+            <p class="love-message">Forever Yours, Always ❤️</p>
+            <button class="btn btn-restart" onclick="restartSite()">Start Over</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
